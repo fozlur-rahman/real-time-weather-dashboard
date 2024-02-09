@@ -1,3 +1,4 @@
+import search from "../../assets/search.svg";
 function SearchBox() {
     return (
         <form action="#">
@@ -9,7 +10,7 @@ function SearchBox() {
                     required
                 />
                 <button type="submit">
-                    <img src="./assets/search.svg" />
+                    <img src={search} />
                 </button>
             </div>
         </form>
