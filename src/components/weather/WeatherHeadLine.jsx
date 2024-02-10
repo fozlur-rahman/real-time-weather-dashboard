@@ -16,7 +16,7 @@ import { default as ClearIcon, default as SunnyIcon } from "../../assets/sun.svg
 import ThunderIcon from "../../assets/thunder.svg";
 function WeatherHeadLine() {
     const { weatherData } = useContext(WeatherContext);
-    const { temperature, climate, time } = weatherData;
+    const { temperature, climate, time, location } = weatherData;
 
     // dynaic icon for weather
     const getweatherIcon = (climate) => {
@@ -55,7 +55,9 @@ function WeatherHeadLine() {
                     </h1>
                     <div className="flex items-center space-x-4 md:mb-4">
                         <img src={pin} />
-                        <h2 className="text-2xl lg:text-[50px]">Dhaka</h2>
+                        <h2 className="text-2xl lg:text-[50px]">
+                            {location === "Purbapāra" ? "Pabna" : location}
+                        </h2>
                     </div>
                 </div>
             </div>
