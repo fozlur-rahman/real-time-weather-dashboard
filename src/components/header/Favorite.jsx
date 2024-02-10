@@ -1,7 +1,7 @@
 import heart from "../../assets/heart.svg";
 function Favorite({ onShow }) {
     return (
-        <div className="p-2 hover:bg-black/30 cursor-pointer flex gap-2 items-center rounded-md transition-all">
+        <div className="text-sm md:text-base inline-flex items-center space-x-2 px-3 py-1.5 rounded-md bg-[#C5C5C54D]">
             <img src={heart} alt="" />
             <span onClick={() => onShow((show) => !show)}>Favourite Locations</span>
         </div>

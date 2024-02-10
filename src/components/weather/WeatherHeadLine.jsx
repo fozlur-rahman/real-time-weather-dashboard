@@ -19,7 +19,7 @@ function WeatherHeadLine() {
     const { temperature, climate, time, location } = weatherData;
 
     // dynaic icon for weather
-    const getweatherIcon = (climate) => {
+    const getWeatherIcon = (climate) => {
         switch (climate) {
             case "Rain":
                 return RainIcon;
@@ -46,7 +46,7 @@ function WeatherHeadLine() {
         <div>
             <div className="max-md:flex items-center justify-between md:-mt-10">
                 <div className="flex">
-                    <img src={getweatherIcon(climate)} alt="climate" />
+                    <img src={getWeatherIcon(climate)} alt="climate" />
                     <h2 className="text-2xl ms-3 text-yellow-700">{climate}</h2>
                 </div>
                 <div className="max-md:flex items-center max-md:space-x-4">
