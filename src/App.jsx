@@ -1,12 +1,14 @@
 import "./App.css";
 import Page from "./Page";
-import { WeatherProvider } from "./provider";
+import { FavoriteProvider, WeatherProvider } from "./provider";
 function App() {
     return (
         <>
-            <WeatherProvider>
-                <Page />
-            </WeatherProvider>
+            <FavoriteProvider>
+                <WeatherProvider>
+                    <Page />
+                </WeatherProvider>
+            </FavoriteProvider>
         </>
     );
 }
