@@ -12,14 +12,11 @@ import {
 } from "../../assets/haze.svg";
 import SnowIcon from "../../assets/icons/snow.svg";
 import RainIcon from "../../assets/rainy.svg";
-import {
-    default as ClearIcon,
-    default as SunnyIcon,
-} from "../../assets/sun.svg";
+import { default as ClearIcon, default as SunnyIcon } from "../../assets/sun.svg";
 import ThunderIcon from "../../assets/thunder.svg";
 function WeatherHeadLine() {
     const { weatherData } = useContext(WeatherContext);
-    const { temperature, climate, location, time } = weatherData;
+    const { temperature, climate, time } = weatherData;
 
     // dynaic icon for weather
     const getweatherIcon = (climate) => {

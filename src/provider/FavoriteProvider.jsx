@@ -4,18 +4,19 @@ import useLocalStorage from "../hooks/useLocalStorage";
 function FavoriteProvider({ children }) {
     const [favorites, setFavorites] = useLocalStorage("favorites", []);
 
-    const addToFavorites = (latitude, longitude, loaction) => {
-        setFavorites(...favorites, {
-            latitude: latitude,
-            longitude: longitude,
-            location: loaction,
-        });
+    const addToFavorites = (latitude, longitude, location) => {
+        setFavorites([
+            ...favorites,
+            {
+                latitude: latitude,
+                longitude: longitude,
+                location: location,
+            },
+        ]);
     };
 
-    const removeToFavorite = (loaction) => {
-        const restFavorite = favorites.filter(
-            (fav) => fav.loaction !== loaction
-        );
+    const removeToFavorite = (location) => {
+        const restFavorite = favorites.filter((fav) => fav.location !== location);
         setFavorites(restFavorite);
     };
     return (
