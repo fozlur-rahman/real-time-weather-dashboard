@@ -1,9 +1,12 @@
 import "./App.css";
 import Page from "./Page";
+import { WeatherProvider } from "./provider";
 function App() {
     return (
         <>
-            <Page />
+            <WeatherProvider>
+                <Page />
+            </WeatherProvider>
         </>
     );
 }
